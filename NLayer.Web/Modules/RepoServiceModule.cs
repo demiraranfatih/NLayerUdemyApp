@@ -1,4 +1,4 @@
-﻿namespace NLayer.API.Modules
+﻿namespace NLayer.Web.Modules
 {
     using Module = Autofac.Module;
     using System.Reflection;
@@ -11,7 +11,7 @@
     using NLayer.Core.Services;
     using NLayer.Repository.UnitOfWorks;
     using NLayer.Core.UnitOfWorks;
-    using NLayer.Caching;
+
 
     public class RepoServiceModule :Module
     {
@@ -39,12 +39,8 @@
             //programcs de belirlemiş olduğum
             //genericleri yukarıda yapacağım eklemeyi unitofwork generic değil 
 
-            /*cacheden okumasın artık diyorum.*/
-        //    builder.RegisterType<ProductServiceWithCatching>().As<IProductService>();
 
-
-
-
+            //web için cache kaldırıyorum
 
 
             base.Load(builder);
